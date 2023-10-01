@@ -33,5 +33,13 @@ app.use("/api/user", userRouter)
 app.use("/api/task", taskRouter)
 app.use("/api/forgotPassword", forgotPasswordRouter)
 
+app.get("/", (req, res) => {
+	return res.json({
+		success:true,
+		message:'Your server is up and running....'
+	});
+});
+
+
 //listen
 app.listen(port, () => console.log(`Listening on localhost:${port}`))
